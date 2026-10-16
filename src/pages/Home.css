@@ -1,0 +1,371 @@
+/* src/pages/Home.css */
+
+.home-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 60px;
+  background-color: var(--ion-background-color, #f7f9fc);
+}
+
+.home-intro {
+  margin: 0 auto 28px;
+  text-align: center;
+}
+
+.home-intro h1 {
+  margin: 12px 0 10px;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-weight: 800;
+  color: #1e293b;
+  line-height: 1.2;
+}
+
+.home-intro p {
+  max-width: 580px;
+  margin: 0 auto;
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* --- ESTILOS KIUT PARA LOS BOTONES DE NAVEGACIÓN --- */
+.home-quick-nav {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.quick-nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  padding: 12px 22px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #475569;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(133, 164, 200, 0.12);
+  transition: all 0.25s ease;
+}
+
+.quick-nav-btn:hover {
+  transform: translateY(-3px);
+  background: #edf2f8;
+  border-color: #94a3b8;
+  box-shadow: 0 8px 20px rgba(133, 164, 200, 0.25);
+  color: #1e293b;
+}
+
+/* --- BARRA DE BÚSQUEDA --- */
+.search-container {
+  width: 100%;
+  max-width: 680px;
+  margin: 0 auto 30px;
+}
+
+.search-bar-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #ffffff;
+  padding: 6px 8px 6px 12px;
+  border-radius: 50px;
+  border: 1px solid #cbd5e1;
+  box-shadow: 0 6px 20px rgba(133, 164, 200, 0.15);
+}
+
+.search-bar-wrapper ion-searchbar {
+  --background: transparent;
+  --box-shadow: none;
+  --border-radius: 0;
+  padding: 0;
+  flex: 1;
+}
+
+.search-bar-wrapper ion-button {
+  --border-radius: 40px;
+  margin: 0;
+  height: 42px;
+  padding-inline: 20px;
+  font-weight: 600;
+  text-transform: none;
+}
+
+.home-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 30px 16px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03);
+  margin-top: 20px;
+}
+
+.home-message h2,
+.home-message h3 {
+  margin: 0;
+  color: #1e293b;
+}
+
+.home-message p {
+  max-width: 500px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.home-message ion-spinner {
+  width: 36px;
+  height: 36px;
+  color: var(--ion-color-primary);
+}
+
+.error-message {
+  border: 1px solid #fecaca;
+  background-color: #fff5f5;
+  border-radius: 16px;
+}
+
+.results-section {
+  margin-top: 32px;
+}
+
+.results-section h2 {
+  margin-bottom: 6px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.results-count {
+  color: #64748b;
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(100%, 210px), 1fr)
+  );
+  gap: 22px;
+  align-items: stretch;
+}
+
+.book-card {
+  margin: 0;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(133, 164, 200, 0.22);
+}
+
+/* Contenedor de la portada con el botón de corazón flotante */
+.book-cover-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background: #f1f5f9;
+}
+
+.book-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cover-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #64748b;
+  background: #f1f5f9;
+}
+
+/* Estilo del botón de corazón flotante (🤍) */
+.favorite-heart-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e2e8f0;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.favorite-heart-btn:hover {
+  transform: scale(1.1);
+  background: #ffffff;
+}
+
+.book-card ion-card-header {
+  padding: 14px 16px 6px;
+}
+
+.book-card ion-card-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.35;
+}
+
+.book-card ion-card-content {
+  flex: 1;
+  padding: 0 16px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.book-card ion-card-content p {
+  color: #64748b;
+  font-size: 0.9rem;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+/* Fila inferior para el botón de biblioteca y enlace de detalles */
+.card-actions-row {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.btn-library-inline {
+  width: 100%;
+  margin: 0;
+  --border-radius: 12px;
+  font-weight: 600;
+  text-transform: none;
+}
+
+/* Estilo de enlace moderno para "Ver detalles" */
+.details-link {
+  background: transparent;
+  border: none;
+  color: #7ea6e0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 4px;
+  transition: color 0.2s ease;
+}
+
+.details-link:hover {
+  color: #5680b9;
+}
+
+.data-note {
+  color: #94a3b8;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 480px) {
+  .home-container {
+    padding: 16px 12px 32px;
+  }
+
+  .search-bar-wrapper {
+    flex-direction: column;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    gap: 10px;
+  }
+
+  .search-bar-wrapper ion-searchbar {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #cbd5e1;
+    box-shadow: 0 4px 15px rgba(133, 164, 200, 0.15);
+  }
+
+  .search-bar-wrapper ion-button {
+    width: 100%;
+  }
+
+  .books-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .book-cover-wrapper {
+    height: 190px;
+  }
+
+  .book-card ion-card-title {
+    font-size: 0.95rem;
+  }
+}
+
+/* --- HEADER CON COLOR Y ESTILO KIUT --- */
+.custom-header {
+  box-shadow: 0 6px 20px rgba(126, 166, 224, 0.25) !important;
+}
+
+.custom-toolbar {
+  /* Fondo con un degradado azul pastel suave y vibrante */
+  --background: linear-gradient(135deg, #7ea6e0 0%, #a2c4f2 100%);
+  --color: #ffffff;
+  padding: 8px 16px;
+}
+
+.custom-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+
+.logout-btn {
+  --color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: none;
+  --border-radius: 20px;
+  background: rgba(255, 255, 255, 0.15);
+  padding-inline: 12px;
+  transition: all 0.2s ease;
+}
+
+.logout-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-1px);
+}

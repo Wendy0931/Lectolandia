@@ -1,0 +1,132 @@
+/* src/pages/Login.css */
+
+/* --- HEADER EN ARMONÍA CON EL RESTO DE LA APP --- */
+.custom-header {
+  box-shadow: 0 6px 20px rgba(126, 166, 224, 0.25) !important;
+}
+
+.custom-toolbar {
+  --background: linear-gradient(135deg, #7ea6e0 0%, #a2c4f2 100%);
+  --color: #ffffff;
+  padding: 8px 16px;
+}
+
+.custom-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+/* --- CONTENEDOR PRINCIPAL Y REGISTRO --- */
+.login-content {
+  --background: #f7f9fc;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 440px;
+  margin: 40px auto;
+  padding: 0 20px 60px;
+}
+
+.login-heading {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.login-heading h1 {
+  margin-bottom: 8px;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1e293b;
+}
+
+.login-heading p {
+  color: #64748b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* --- TARJETA DE FORMULARIO --- */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 24px rgba(126, 166, 224, 0.15);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.custom-label {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #334155;
+}
+
+.login-form ion-input {
+  --padding-start: 14px;
+  --padding-end: 14px;
+  --padding-top: 12px;
+  --padding-bottom: 12px;
+  --border-color: #cbd5e1;
+  --highlight-color-focused: #7ea6e0;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  background-color: #f8fafc;
+  font-size: 0.95rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-form ion-input:focus-within {
+  border-color: #7ea6e0;
+  box-shadow: 0 0 0 3px rgba(126, 166, 224, 0.2);
+}
+
+/* --- BOTÓN DE ENVIAR --- */
+.login-submit-btn {
+  --border-radius: 12px;
+  font-weight: 700;
+  text-transform: none;
+  margin-top: 6px;
+  height: 48px;
+}
+
+/* --- SECCIÓN DE CAMBIO DE MODO (LOGIN / CREAR CUENTA) --- */
+.login-switch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 12px;
+  padding-top: 16px;
+  border-top: 1px solid #f1f5f9;
+  text-align: center;
+}
+
+.switch-text {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.switch-btn {
+  --color: #5680b9;
+  font-weight: 700;
+  font-size: 0.95rem;
+  text-transform: none;
+}
+
+.switch-btn:hover {
+  --color: #3b82f6;
+}

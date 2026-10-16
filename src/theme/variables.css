@@ -1,2 +1,15 @@
-/* For information on how to create your own theme, please refer to:
-http://ionicframework.com/docs/theming/ */
+/* src/theme/variables.css */
+
+:root {
+  /* Azul pastel un poco más subido */
+  --ion-color-primary: #7ea6e0;
+  --ion-color-primary-rgb: 126, 166, 224;
+
+  /* Texto en color oscuro/negro para los botones primarios */
+  --ion-color-primary-contrast: #fff;
+  --ion-color-primary-contrast-rgb: 30, 41, 59;
+
+  /* Colores secundarios de sombreado y transición */
+  --ion-color-primary-shade: #6f92c7;
+  --ion-color-primary-tint: #8bb0e5;
+}
